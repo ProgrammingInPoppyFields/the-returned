@@ -1,10 +1,10 @@
 <img src="https://images.unsplash.com/photo-1702474447694-e8c8dc2508e0?w=1760&h=600&fit=crop&q=80&auto=format" alt="" width="100%">
 
-# THE RETURNED
+# ANIMA
 
 *Those who came back. Not all of them. Not for long.*
 
-THE RETURNED is an epistolary fiction told through one blog in several voices: an observer who has learned the rules nobody publishes, the returned themselves, the living who answer the door, and a few unsent drafts. The dead come back, but not violent and not infectious. They come back as themselves, in the clothes they were buried in, for days or weeks. Then they leave again. Nobody gets closure. They get time.
+ANIMA is an epistolary fiction told through one blog in several voices: an observer who has learned the rules nobody publishes, the returned themselves, the living who answer the door, and a few unsent drafts. The dead come back, but not violent and not infectious. They come back as themselves, in the clothes they were buried in, for days or weeks. Then they leave again. Nobody gets closure. They get time.
 
 There is no plot summary and no lore page. The world comes through in short posts: logs that stop, first words, rules, drafts nobody sends. Read it like a stranger's blog you found and couldn't stop scrolling.
 
@@ -27,7 +27,7 @@ The top of `posts.json` has the site-wide settings:
 
 ```json
 "site": {
-  "title": "THE RETURNED",
+  "title": "ANIMA",
   "definition": { ... },
   "favicon": "https://images.unsplash.com/photo-...",
   "description": "**Those who came back.**\nNot all of them. Not for long."
