@@ -1,0 +1,288 @@
+{
+  "site": {
+    "title": "THE RETURNED",
+    "definition": {
+      "term": "RETURNED",
+      "pronunciation": "/rɪˈtɜːrnd/",
+      "senses": [
+        {"label": "common", "text": "come back to a place, a person, a former state."},
+        {"label": "folklore", "text": "the dead, walking again. usually hungry. usually wrong."},
+        {"label": "here", "text": "**back for a while.** not for long. still themselves.", "highlight": true}
+      ],
+      "footer": ["REF. R-01", "THE RETURNED", "REV. 01"]
+    },
+    "favicon": "https://images.unsplash.com/photo-1702474447694-e8c8dc2508e0?q=80&w=2744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "**Those who came back.**\nNot all of them. Not for long.",
+    "about": "An epistolary fiction, told through one blog in several voices. Zombie fiction, minus the hunger: the dead come back as themselves, for days or weeks, and everyone left behind has to decide what to do with the time.",
+    "speakers": {
+      "observer": {"name": "The Observer", "note": "Has seen enough returns to know the rules nobody publishes."},
+      "returned": {"name": "The Returned", "note": "Back for now. Still in the funeral clothes."},
+      "living": {"name": "The Living", "note": "Making tea. Trying not to waste it."},
+      "found": {"name": "Unsent Drafts", "note": "Typed, deleted, typed again. Never sent."}
+    }
+  },
+  "posts": [
+    {
+      "speaker": "living",
+      "style": "big",
+      "body": [
+        "the first time, i thought it was a prank.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "fog", "dawn"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "people come back\n\nnot all of them\nnot for long\n\nthey don’t come back violent\nthey don’t come back “infectious”\n\n**they come back like themselves**\njust… interrupted"
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""},
+        "the cemetery ground isn’t torn up\n\n**it’s opened**\nlike someone did it carefully\nat night, in the fog"
+      ],
+      "tags": ["again", "sightings", "fog"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "how long they stay depends on how long they were gone.\n\nrecently deceased -> longer visits\nlong dead -> shorter ones\n\nnobody publishes this.\neverybody notices it."
+      ],
+      "tags": ["again", "log", "leaving"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "cremated people don’t return.\n\nthere’s nothing for morning to restore.\n\nno one argues about this."
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "nothing is exposed.\nnothing is missing.\nnothing falls apart.\n\nwhatever brought them back\nmakes sure of that.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "speaker": "observer",
+      "style": "big",
+      "body": [
+        "common mistakes newcomers make:\nexpecting something frightening.\n\nwhat actually happens is: conversation.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "title": "borrowed structure",
+      "speaker": "observer",
+      "body": [
+        "whatever brings them back\nstabilizes what matters.\n\nface. voice. posture.\n\nenough for recognition.\nnot enough for permanence.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "log"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "they move carefully.\nnot stiffly.\nnot wrong.\n\ncarefully.\n\nlike someone borrowing a body\nthat isn’t theirs anymore."
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "memory mostly returns with them.\n\nnames, usually.\n**faces, almost always.**\npasswords, rarely.\n\n**the important things survive.**"
+      ],
+      "tags": ["again", "log"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "bright lights tire them.\nloud rooms tire them.\nlong talks tire them.\n\nthey’re running on\nborrowed structure."
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "it doesn’t heal them.\n\nit just holds them together\nuntil it can’t anymore."
+      ],
+      "tags": ["again", "leaving"]
+    },
+    {
+      "speaker": "observer",
+      "body": [
+        "**common first questions people ask the returned:**\n- are you okay\n- are you cold\n- do you remember me\n\n**common answer:** yes"
+      ],
+      "tags": ["again", "log"]
+    },
+    {
+      "title": "returned",
+      "speaker": "returned",
+      "body": [
+        "*i woke up too early.*\n\n*that’s what it feels like.*\n\n*like i opened my eyes during the part that was supposed to stay dark.*"
+      ],
+      "tags": ["again", "sightings", "notes"]
+    },
+    {
+      "speaker": "returned",
+      "style": "big",
+      "body": [
+        "*the first thing everyone says is my name.*\n\n*like saying it out loud will make me real enough to keep.*"
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "title": "returned: clothes",
+      "speaker": "returned",
+      "body": [
+        "*these clothes were chosen for lying still*\n\n*they pinch when i bend*\n\n*i keep smoothing the sleeves like manners still matter*"
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "title": "human logistics",
+      "speaker": "returned",
+      "style": "big",
+      "body": [
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""},
+        "funeral clothes aren’t made for walking.\n—\nthat was the first lesson.\n**the second was:** neither are the shoes."
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "title": "[UNSENT] DRAFT #1",
+      "speaker": "found",
+      "body": [
+        "[UNSENT]\nhe’s back\n\n[UNSENT]\ni’m not joking\n\n[UNSENT]\ni don’t know what to do with my face right now"
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "speaker": "living",
+      "body": [
+        "he came back wearing the suit we buried him in.\n\nthe first thing he said was\n“this is still uncomfortable.”",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "sightings", "fog"]
+    },
+    {
+      "speaker": "living",
+      "style": "big",
+      "body": [
+        "i practiced what i would say if she ever returned.\n\nwhat i actually said was\n“do you want tea?”"
+      ],
+      "tags": ["again", "daily"]
+    },
+    {
+      "title": "first words",
+      "speaker": "living",
+      "body": [
+        "i thought i would say something meaningful.\n\ni said: “you’re cold.”\n\nand he said: “yeah.”\n\nand that was somehow the beginning of everything we didn’t get to finish."
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "title": "[UNSENT] DRAFT #2",
+      "speaker": "found",
+      "body": [
+        "[UNSENT]\nshe’s here\n\n[UNSENT]\nshe remembers my name\n\n[UNSENT]\ni’m scared to blink in case this is the part where i wake up"
+      ],
+      "tags": ["again", "notes", "daily"]
+    },
+    {
+      "title": "warmth as ritual",
+      "speaker": "living",
+      "style": "big",
+      "body": [
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""},
+        "we keep handing them warm things.\ntea. broth. blankets.\nlike warmth can negotiate with the clock."
+      ],
+      "tags": ["again", "daily", "notes"]
+    },
+    {
+      "speaker": "living",
+      "body": [
+        "**log:**\nday 4 - orientation intact\nday 7 - slower response time\nday 10 - repeating questions\nday 13 - long pauses\nday 16 - slept most of the day\n\n________________________\n\n*we stop writing after this.*\n\n*i don’t remember deciding that.\nwe just did.*"
+      ],
+      "tags": ["again", "log", "leaving"]
+    },
+    {
+      "title": "explicit rule",
+      "speaker": "observer",
+      "body": [
+        "most returns last days.\nsome last weeks.\n\nno one stays.\n\neveryone acts like maybe this time will be different.\n\nit isn’t."
+      ],
+      "tags": ["again", "leaving", "notes"]
+    },
+    {
+      "title": "the joy crash",
+      "speaker": "living",
+      "body": [
+        "*the worst part is how fast we start planning.\ngroceries. a drive. a movie.*\n\n*like the week belongs to us again.\nlike the rules changed when we weren’t looking.*"
+      ],
+      "tags": ["again", "notes", "leaving"]
+    },
+    {
+      "title": "recognition",
+      "speaker": "observer",
+      "body": [
+        "sometimes they don’t recognize anyone at first.\nthen something in them shifts,\nlike memory findings its way back into the room.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "fog", "sightings"]
+    },
+    {
+      "speaker": "living",
+      "body": [
+        "**log:**\nday 2 - laughing\nday 5 - laughing\nday 8 - laughing less\nday 11 - quiet\nday 14 - did not wake"
+      ],
+      "tags": ["again", "log", "leaving"]
+    },
+    {
+      "title": "sensory details",
+      "speaker": "returned",
+      "body": [
+        "*food tastes like memory.*\n\n*not bad.\njust distant.*\n\n*i eat anyways because it makes them less afraid.*"
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "speaker": "living",
+      "body": [
+        "she’s here.\n\nshe hugged me like it was normal.\n\ni don’t know whether to cry or make coffee."
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "title": "[UNSENT] DRAFT #3",
+      "speaker": "found",
+      "body": [
+        "[UNSENT]\n**how do you act normal when someone is back?**\n\n[UNSENT]\n**how do you not waste it?**\n\n[UNSENT]\n**how do you not make it about you?**\n\n______________\n\n*i keep typing\ni keep deleting*\n\n*we all do*"
+      ],
+      "tags": ["again", "notes"]
+    },
+    {
+      "title": "returned: leaving",
+      "speaker": "returned",
+      "body": [
+        "*i can tell when it’s getting close.*\n\n*not pain.\nnot fear.*\n\n*just… thinning.*\n*like a room emptying out after everyone already said goodbye.*"
+      ],
+      "tags": ["again", "leaving", "notes"]
+    },
+    {
+      "title": "after + closer",
+      "speaker": "observer",
+      "body": [
+        "you don’t get closure.\n\nyou get time.",
+        {"image": "https://images.unsplash.com/photo-1496156298940-6902fc34e55d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "alt": ""}
+      ],
+      "tags": ["again", "leaving", "dawn"]
+    }
+  ]
+}

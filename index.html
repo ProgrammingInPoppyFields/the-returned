@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE RETURNED</title>
+  <meta name="description" content="THE RETURNED. Those who came back. An epistolary fiction told through one blog in several voices: the dead come back as themselves, for a little while.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- site chrome fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@700&family=Jost:wght@300;400&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- speaker fonts: Observer, Returned, Living, Unsent Drafts -->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link id="favicon" rel="icon" href="data:,">
+</head>
+<body>
+  <!-- dictionary-entry header: content comes from "definition" in posts.json -->
+  <section id="definition" class="definition" hidden></section>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-card paper">
+        <div id="site-description" class="description"></div>
+        <div id="site-about" class="about" hidden></div>
+        <div class="how-to-read">
+          <p>read from the top.<br>time moves down.<br>keep scrollin'.</p>
+        </div>
+        <nav class="nav">
+          <a href="#"><span class="num">01</span>home</a>
+        </nav>
+      </div>
+    </aside>
+
+    <section class="feed">
+      <div id="voices" class="voices paper" hidden></div>
+      <div id="filter" class="filter" hidden></div>
+      <div id="posts"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

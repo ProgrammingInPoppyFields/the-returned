@@ -1,0 +1,448 @@
+/* ---------- colors (edit these to retheme) ----------
+   Matched to the original Tumblr theme: soft warm-neutral grays,
+   charcoal-gray bars, near-black headings. */
+:root {
+  /* page geometry: the header card spans sidebar + gap + feed exactly */
+  --side-w: 240px;
+  --feed-w: 580px;
+  --col-gap: 90px;
+
+  --bg: #1c1a16;          /* page background: warm near-black */
+  --card: #2f2b25;
+  --text: #c9c1b3;        /* body text */
+  --strong: #ede7dc;      /* titles, bold */
+  --muted: #8b8375;       /* small labels */
+  --border: #4a443a;      /* thin dividers */
+  --bar: #4a443a;
+  --bar-text: #ede7dc;
+  --chip: #2f2b25;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --post-paper: #302c26;  /* posts + header card */
+  --frame-paper: #3d372e; /* sidebar + voices card */
+
+  --pad: 32px;            /* inner padding of cards */
+}
+
+/* ---------- base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+}
+
+a { color: var(--muted); text-decoration: none; transition: color 0.3s, background 0.3s; }
+a:hover { color: var(--strong); }
+strong { color: var(--strong); }
+
+/* ---------- paper cards ----------
+   Shared look for the header card, the sidebar and the voices card:
+   off-white card stock with grain, fibers and faint mottling, lifted
+   off the page with layered shadows plus a soft contact shadow below. */
+.paper {
+  --ink: #ede7dc;
+  --ink-soft: #c9c1b3;
+  --rule: #a49a89;
+  --rule-soft: rgba(237, 231, 220, 0.18);
+  position: relative;
+  color: var(--ink);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  letter-spacing: 0.02em;
+  background-color: var(--paper-color, var(--frame-paper));
+  /* paper surface: embossed tooth, specks, cloudy pulp, soft light falloff */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='t' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='2' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' surfaceScale='1.1' diffuseConstant='1.2' lighting-color='%23ffffff'%3E%3CfeDistantLight azimuth='225' elevation='65'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23t)' opacity='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25  0 0 0 0 0.25  0 0 0 0 0.25  0 0 16 0 -11.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)' opacity='0.35'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.35  0 0 0 0 0.35  0.16 0 0 0 -0.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E"),
+    linear-gradient(160deg, rgba(255, 240, 215, 0.06) 0%, rgba(255, 240, 215, 0) 50%, rgba(0, 0, 0, 0.12) 100%);
+  background-blend-mode: multiply, normal, normal, normal;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 240, 215, 0.06),
+    inset 0 0 30px rgba(0, 0, 0, 0.25),
+    0 1px 1px rgba(0, 0, 0, 0.45),
+    0 2px 3px rgba(0, 0, 0, 0.35),
+    0 7px 12px -3px rgba(0, 0, 0, 0.5),
+    0 22px 32px -12px rgba(0, 0, 0, 0.75);
+}
+/* contact shadow: a soft dark ellipse just under the bottom edge */
+.paper::after {
+  content: '';
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 100%;
+  height: 26px;
+  pointer-events: none;
+  background: radial-gradient(ellipse 50% 100% at 50% 0%, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 70%);
+  filter: blur(3px);
+}
+
+/* ---------- dictionary-entry header ----------
+   A typed index card. Its edges line up with the sidebar's left edge
+   and the feed's right edge. */
+.definition {
+  padding: 56px 16px 0;
+}
+.definition[hidden] { display: none; }
+
+.definition-inner {
+  --paper-color: var(--post-paper);   /* same stock as the posts */
+  max-width: calc(var(--side-w) + var(--col-gap) + var(--feed-w));
+  margin: 0 auto;
+  padding: 26px 34px 16px;
+}
+
+.definition-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--rule);
+}
+.term {
+  margin: 0;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+.pronunciation {
+  font-style: italic;
+  font-size: 0.95em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.senses { list-style: none; margin: 0; padding: 0; }
+.sense {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.sense-num {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-weight: 300;
+  font-size: 1.45em;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+.sense-body {
+  padding-left: 28px;
+  border-left: 1px solid var(--rule);
+}
+.sense-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+.sense-text {
+  display: block;
+  font-size: 0.86em;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.sense.highlight .sense-text { color: var(--ink); }
+.sense-text strong { font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink); }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  font-weight: 700;
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.card-footer:empty { display: none; }
+
+/* ---------- layout ---------- */
+.definition[hidden] + .layout { padding-top: 48px; }
+.layout {
+  margin: 0 auto;
+  padding: 56px 16px 100px;
+  display: grid;
+  grid-template-columns: var(--side-w) minmax(0, var(--feed-w));
+  gap: var(--col-gap);
+  justify-content: center;
+}
+
+/* ---------- sidebar (paper card) ---------- */
+.sidebar-card {
+  position: sticky;
+  top: 32px;
+}
+.sidebar-card > * + * { border-top: 1px solid var(--rule-soft); }
+
+.description {
+  padding: 22px 24px 18px;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+.description p { margin: 0; }
+.description strong { color: var(--ink); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.about {
+  padding: 16px 24px 18px;
+  font-size: 0.84em;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.about p { margin: 0; }
+.about p + p { margin-top: 0.8em; }
+.about[hidden] { display: none; }
+
+.how-to-read {
+  padding: 16px 24px 18px;
+  font-size: 0.8em;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.how-to-read p { margin: 0; }
+
+.nav {
+  padding: 14px 24px 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.sidebar-card .nav { border-top: 1.5px solid var(--rule); }
+.nav a { color: var(--ink); }
+.nav a:hover { color: var(--ink-soft); }
+.nav .num { margin-right: 0.9em; }
+
+/* ---------- posts ---------- */
+.entry { margin-bottom: 60px; }
+
+/* posts are paper too, on a slightly darker stock than the
+   sidebar and voices cards (same stock as the header card) */
+.post {
+  --paper-color: var(--post-paper);
+  color: var(--ink-soft);
+}
+.post .post-title { color: var(--ink); }
+.post-body strong { color: var(--ink); }
+
+.post-title {
+  margin: 0;
+  padding: 30px var(--pad) 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.6em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--strong);
+  line-height: 1.35;
+}
+
+.post-body { padding: var(--pad); }
+.post-body > :first-child { margin-top: 0; }
+.post-body > :last-child { margin-bottom: 0; }
+
+.text p { margin: 1em 0; }
+.text:first-child p:first-child { margin-top: 0; }
+.text:last-child p:last-child { margin-bottom: 0; }
+
+/* bold text inside posts reads as a small-caps label, like the original */
+.post-body strong {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* "style": "big" posts */
+.post.big .text {
+  font-weight: 700;
+  font-size: 1.55em;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.post.big .post-body strong { font-size: inherit; text-transform: none; letter-spacing: inherit; }
+
+blockquote.text {
+  margin: 1.25em 0 1.25em 1.25em;
+  padding-left: 1.25em;
+  border-left: 1px solid var(--border);
+}
+
+/* images: 400px wide, height follows the image's shape, left-aligned.
+   On narrow phones they shrink to fit the card. */
+.post-image {
+  margin: 1.5em 0;
+  text-align: left;
+}
+.post-image img {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+}
+.post-image figcaption {
+  margin-top: 0.5em;
+  font-size: 0.75em;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* ---------- speaker voices ----------
+   Each speaker writes in their own typeface. To recast a voice,
+   change its --voice-font here (and the font link in index.html). */
+.speaker-observer {
+  --voice-font: 'Spectral', Georgia, serif;
+  --voice-size: 1.02em;
+  --voice-track: 0.01em;
+}
+.speaker-returned {
+  --voice-font: 'EB Garamond', Garamond, 'Times New Roman', serif;
+  --voice-size: 1.14em;
+  --voice-track: 0.02em;
+}
+.speaker-living {
+  --voice-font: 'Alegreya Sans', 'Helvetica Neue', Arial, sans-serif;
+  --voice-size: 1.04em;
+  --voice-track: 0.03em;
+}
+.speaker-found {
+  --voice-font: 'Fira Mono', 'Courier New', monospace;
+  --voice-size: 0.9em;
+  --voice-track: 0.01em;
+}
+
+/* posts take on their speaker's font, titles included */
+.post[class*="speaker-"] .post-body,
+.post[class*="speaker-"] .post-title {
+  font-family: var(--voice-font);
+  letter-spacing: var(--voice-track);
+}
+.post[class*="speaker-"] .post-body { font-size: var(--voice-size); }
+.post[class*="speaker-"] .post-title { text-transform: none; letter-spacing: 0.01em; }
+.post.speaker-returned .post-title { font-style: italic; }
+
+/* ---------- voices card (paper, top of feed) ---------- */
+.voices { margin-bottom: 56px; }
+.voices[hidden] { display: none; }
+.voices-label {
+  margin: 0 var(--pad);
+  padding: 20px 0 10px;
+  border-bottom: 1.5px solid var(--rule);
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.voices-hint {
+  margin: 0 var(--pad);
+  padding: 11px 0 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-weight: 700;
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+.voices ul { list-style: none; margin: 0; padding: 2px 0 4px; }
+.voice {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 0 var(--pad) 0 calc(var(--pad) - 3px);
+  border-left: 3px solid transparent;
+  transition: background 0.25s, border-color 0.25s;
+}
+.voice + .voice > a { border-top: 1px solid var(--rule-soft); }
+.voice a {
+  flex: 1;
+  display: block;
+  padding: 12px 0;
+  color: var(--ink-soft);
+  font-family: var(--voice-font);
+  letter-spacing: var(--voice-track);
+}
+.voice-name { display: block; font-weight: 700; color: var(--ink); font-size: 1.12em; line-height: 1.4; }
+.voice.speaker-returned .voice-name { font-style: italic; font-size: 1.2em; }
+.voice-note { display: block; font-size: 0.9em; line-height: 1.5; }
+.voice-count {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.voice:hover { background: rgba(255, 240, 215, 0.04); }
+.voice.active { border-left-color: var(--ink); background: rgba(255, 240, 215, 0.06); }
+
+/* ---------- tags ---------- */
+.tags { margin-top: 26px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em; }
+.tags a {
+  display: inline-block;
+  background: var(--post-paper);
+  color: var(--text);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-weight: 700;
+  padding: 0.45em 1em;
+  margin: 0 0.8em 0.75em 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45), 0 3px 6px -2px rgba(0, 0, 0, 0.6);
+}
+.tags a:hover { background: var(--strong); color: var(--bg); }
+
+.filter {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+}
+
+/* ---------- reading-order labels ---------- */
+.marker {
+  margin: 0 0 30px;
+  padding: 0 4px;
+  font-size: 0.75em;
+  text-transform: lowercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+.marker .arrow { display: inline-block; margin-left: 0.4em; }
+.marker.end { margin-top: -10px; padding-bottom: 60px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .marker .arrow { animation: nudge 2.4s ease-in-out infinite; }
+}
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* The sidebar stays pinned while scrolling, but only on windows tall
+   enough to show all of it. On shorter windows it scrolls with the page,
+   so its bottom ("keep scrollin'", the nav) never gets cut off. */
+@media (max-height: 680px) {
+  .sidebar-card { position: static; }
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 900px) {
+  :root { --pad: 24px; }
+  .definition { padding: 24px 16px 0; }
+  .definition-inner { max-width: var(--feed-w); }
+  .definition-inner { padding: 20px 18px 12px; }
+  .term { font-size: 1.45em; letter-spacing: 0.08em; }
+  .sense { grid-template-columns: 40px 1fr; }
+  .sense-num { font-size: 1.15em; }
+  .sense-body { padding-left: 14px; }
+  .card-footer { font-size: 0.62em; }
+  .layout { grid-template-columns: minmax(0, var(--feed-w)); gap: 40px; padding-top: 32px; }
+  .definition[hidden] + .layout { padding-top: 24px; }
+  .sidebar-card { position: static; }
+}
