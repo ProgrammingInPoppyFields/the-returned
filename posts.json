@@ -2,14 +2,15 @@
   "site": {
     "title": "THE RETURNED",
     "definition": {
-      "term": "RETURNED",
-      "pronunciation": "/rɪˈtɜːrnd/",
+      "term": "ANIMA",
+      "pronunciation": "n.",
+      "etymology": "Latin: *animā* — breath, soul, life",
       "senses": [
-        {"label": "common", "text": "come back to a place, a person, a former state."},
-        {"label": "folklore", "text": "the dead, walking again. usually hungry. usually wrong."},
-        {"label": "here", "text": "**back for a while.** not for long. still themselves.", "highlight": true}
+        {"label": "animate / animated", "text": "*adj.*\npossessing life; alive, lively, active, or in motion."},
+        {"label": "reanimate / reanimated", "text": "*v.*\nto animate again; in popular fiction, commonly associated with bringing the dead back to life.\n*See: zombies.*"},
+        {"label": "here", "text": "**animated.**\nRather disappointingly, definition 01 applies.", "highlight": true}
       ],
-      "footer": ["REF. R-01", "THE RETURNED", "REV. 01"]
+      "footer": ["REF. A-01", "THE RETURNED"]
     },
     "favicon": "https://images.unsplash.com/photo-1702474447694-e8c8dc2508e0?q=80&w=2744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "description": "**Those who came back.**\nNot all of them. Not for long.",

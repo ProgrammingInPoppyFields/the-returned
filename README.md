@@ -39,16 +39,18 @@ The top of `posts.json` has the site-wide settings:
 
   ```json
   "definition": {
-    "term": "RETURNED",
-    "pronunciation": "/rɪˈtɜːrnd/",
+    "term": "ANIMA",
+    "pronunciation": "n.",
+    "etymology": "Latin: *animā* — breath, soul, life",
     "senses": [
-      { "label": "common", "text": "come back to a place, a person, a former state." },
-      { "label": "here", "text": "**back for a while.** not for long. still themselves.", "highlight": true }
-    ]
+      { "label": "animate / animated", "text": "*adj.*\npossessing life; alive, lively, active, or in motion." },
+      { "label": "here", "text": "**animated.**\nRather disappointingly, definition 01 applies.", "highlight": true }
+    ],
+    "footer": ["REF. A-01", "THE RETURNED"]
   }
   ```
 
-  The header renders as a typed index card whose edges line up with the sidebar and feed below. Add `"footer": ["REF. R-01", "THE RETURNED", "REV. 01"]` for the small typed line along the bottom of the card (any number of items, spread evenly). Senses are numbered automatically in order. `"highlight": true` makes a sense's text darker. Text supports `*italic*` and `**bold**`. Delete the whole `"definition"` block to hide the header.
+  The header renders as a pale reference card whose edges line up with the sidebar and feed below. `pronunciation` sits at the top right (any short text, like `n.`), and `etymology` is the italic line under the term. In a sense's text, `\n` starts a new line, `*italic*` works for parts of speech and cross-references, and `**bold**` sets a word in capitals. Add `"footer": ["REF. R-01", "THE RETURNED", "REV. 01"]` for the small typed line along the bottom of the card (any number of items, spread evenly). Senses are numbered automatically in order. `"highlight": true` makes a sense's text darker. Text supports `*italic*` and `**bold**`. Delete the whole `"definition"` block to hide the header.
 - **favicon**: the browser-tab icon. Paste any Unsplash image link; it gets cropped to a square automatically. Browsers cache favicons hard, so a hard refresh (Cmd+Shift+R) may be needed to see a new one.
 
 Colors and the column widths (`--side-w`, `--feed-w`, `--col-gap`) live at the top of `style.css`. The header card is sized from those three, so it stays aligned if you change them.

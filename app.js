@@ -113,7 +113,10 @@ function renderDefinition(def) {
   el.innerHTML = `
     <div class="definition-inner paper">
       <div class="definition-head">
-        <h1 class="term">${escapeHtml(def.term)}</h1>
+        <div class="term-block">
+          <h1 class="term">${escapeHtml(def.term)}</h1>
+          ${def.etymology ? `<div class="etymology">${inline(def.etymology)}</div>` : ''}
+        </div>
         ${def.pronunciation ? `<span class="pronunciation">${escapeHtml(def.pronunciation)}</span>` : ''}
       </div>
       <ol class="senses">${senses}</ol>
